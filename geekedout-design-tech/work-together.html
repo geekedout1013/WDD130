@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>
+    Work Together-Geekedout Design+Tech
+  </title>
+  <link rel="stylesheet" href="styles/style.css">
+  
+  </style>
+
+</head>
+
+<body>
+    <header>
+      
+  <div id="content">
+    <header>
+      <a id="logo_link" href="index.html">
+        <img class="logo" src="images/geekedout logo 3.png" alt="geekedout logo">
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+                <a href="our-services.html">Our Services</a>
+                <a href="work-together.html">Work Together</a>
+                <a href="">My Story</a>
+      </nav>
+
+    </header>
+    <main>
+        
+        <div class="container-img">
+            <img class="images" src="images/compass.jpg" alt="compass">
+            <img class="images" src="images/BW computer drive.jpeg" alt="computer drive">
+        </div>
+
+
+        <form action="/my-handling-form-page" method="post">
+          <fieldset>
+             <legend>Contact info</legend>
+             <label for="name">Name:</label>
+             <input type="text" id="name" name="user_name">
+          
+             <label for="mail">E-mail:</label>
+             <input type="email" id="mail" name="user_email">
+          
+             <label for="msg">Tell us about your project:</label>
+             <textarea id="msg" name="user_message"></textarea>
+          
+          </fieldset>
+          <button type="submit">Send your message</button>
+        </form>
+        
+    </main>
+    <footer>
+        <p>Geekedout Design + Tech &copy; 2023 - Reese Edwards</p>
+       
+        <div class="social">
+            <a href="https://facebook.com" target="_blank"></a>
+            <a href="https://twitter.com" target="_blank"> </a>
+             <a href="https://instagram.com" target="_blank">
+                <img src="images/social media.PNG" alt="social media">
+            </a>
+        </div>
+            </footer>
+  </div>
+  <script>
+    // get the feedback div element so we can do something with it.
+    const feedbackElement = document.getElementById('feedback');
+    // get the form so we can read what was entered in it.
+    const formElement = document.forms[0];
+    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+    formElement.addEventListener('submit', function (e) {
+      // stop the form from doing the default action.
+      e.preventDefault();
+      // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+      feedbackElement.innerHTML = 'Hello ' + formElement.user_name.value + '! Thank you for your message. We will get back with you as soon as possible!';
+      // make the feedback element visible.
+      feedbackElement.style.display = "block";
+      // add a class to move everything down so our message doesn't cover it.
+      document.body.classList.toggle('moveDown');
+    });
+  </script>
+
+</body>
+
+</html>
