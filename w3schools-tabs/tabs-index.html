@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openInfo(event, 'Info')">Info</button>
+            <button class="tablinks" onclick="openInfo(event, 'Contact')">Contact</button>
+            <button class="tablinks" onclick="openInfo(event, 'Services')">Services</button>
+        </div>
+
+
+        <!-- Tab content -->
+        <div id="Info" class="tabcontent">
+            <h3>Info</h3>
+            <p>Our company was founded in 2022 in the hopes of helping people to better understand and utilize
+                technology</p>
+        </div>
+
+        <div id="Contact" class="tabcontent">
+            <h3>Contact</h3>
+            <p>We can be contacted at 800-657-3322 or at our email info@ourcompany.com</p>
+        </div>
+
+        <div id="Services" class="tabcontent">
+            <h3>Our Services</h3>
+            <p>We offer a variety of services please contact us for more info</p>
+        </div>
+    </main>
+
+    <script>
+        function openInfo(evt,tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>
