@@ -1,6 +1,6 @@
 /*   Import the fonts   */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Zen+Dots&display=swap');
 
 
 
@@ -14,7 +14,7 @@
     --accent3-color: #8b8585;
 
     /* change the values below to your chosen font(s) */
-    --heading-font: "Zen Dots" Helvetica;
+    --heading-font: "Zen Dots", Helvetica;
     --paragraph-font: "Roboto", Helvetica, sans-serif;
 
     /* these colors below should be chosen from among your palette colors above */
@@ -26,7 +26,7 @@
     /* paragraph text on a white background */
     --paragraph-color-on-color: #E6E6E6;
     /* paragraph text on a colored background */
-    --paragraph-background-color: #428a91;
+    --paragraph-background-color: #E9E8DF;
     --nav-link-color: #452D0D;
     --nav-background-color: #bee9f0;
     --nav-hover-link-color: #ebe0d6;
@@ -45,6 +45,7 @@ body {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0;
+    /*! margin: 0 0 2em 0; */
 }
 
 h1,
@@ -105,6 +106,7 @@ a {
 .content {
     max-width: 1600px;
     margin: 0 auto;
+    background-color: #E9E8DF;
 }
 
 /*  This rule name changes based upon the default button color   */
@@ -140,15 +142,15 @@ header {
     display: grid;
     grid-template-columns: 250px auto;
     align-items: center;
-    background-color:#e9e8df;
+    background-color: #e9e8df;
 }
 
 nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
     justify-items: center;
-    color:#bee9f0;
-    
+    color: #bee9f0;
+
 }
 
 
@@ -174,55 +176,66 @@ nav {
 * *
 *****************************************************************/
 footer {
-    background-color:#8b8585;
-    color: var(--accent2-color);
-    font-size: 1.5em;
+    background-color: #393737;
+    color: #edf4f4;
+    font-size: 1rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    align-content: center;
+    align-items: center;
+    padding: 2em 1em;
 }
 
 .social {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-column:5/8 ;
-    grid-row: 4;
-    padding-top: 10px;
-    padding-left: 75px;
-    padding-bottom: 20px;
-    padding-right: 75px;
+    /*! display: grid; */
+    /*! grid-template-columns: repeat(4, 100px); */
+    grid-column: 10/13;
+    grid-row: 1;
+    /*! padding-top: 10px; */
+    /*! padding-left: 75px; */
+    /*! padding-bottom: 20px; */
+    /*! padding-right: 75px; */
 
 
+    justify-self: end;
 }
-.company-info{
-   grid-column: 4/10;
-   grid-row: 1; 
-   justify-self: center;
+
+.company-info {
+    grid-column: 1/6;
+    grid-row: 1;
+    /*! justify-self: center; */
 }
-.facebook-icon{
+
+.facebook-icon {
     grid-column: 1;
     grid-row: 1;
     padding-top: 10px;
     padding-left: 20px;
 }
-.insta-icon{
-    grid-column:3;
+
+.insta-icon {
+    grid-column: 3;
     grid-row: 1;
     padding-top: 10px;
 }
-.twitter-icon{
+
+.twitter-icon {
     grid-column: 2;
     grid-row: 1;
     padding-top: 10px;
 }
-.site-plan{
-/* box-sizing: border-box;
+
+.site-plan {
+    /* box-sizing: border-box;
 border-radius: 5px solid #577a86 ;
 background: #185f66; */
-font-size:23px;
-padding-left: 30px;
-padding-top: 5px;
-color:#a9c8cc}
-   
+    /*! font-size: 23px; */
+    /*! padding-left: 30px; */
+    /*! padding-top: 5px; */
+    color: #fdfdfd;
+    grid-column: 7;
+}
+
 .logo {
     width: 300px;
     height: 150px;
@@ -239,116 +252,250 @@ color:#a9c8cc}
 .home-title {
     font-size: 1.5em;
     grid-column: 3/5;
-    color:#bee9f0;
+    color: #bee9f0;
 
 }
 
 .hero {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr 225px;
+    grid-template-rows: 6em 6em;
     background-color: #e9e8df;
 }
 
 #hero-msg {
     grid-column: 9 / -1;
-    grid-row: 2;
-    padding-bottom: 250px;
-    padding-left:40px;
+    grid-row: 3;
+    padding-top: 9em;
+    padding-left: 40px;
 }
-.inquire{
-    border: solid 1px #5d848a ;
+
+.inquire {
+    border: solid 1px #5d848a;
     border-radius: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     height: 50px;
     text-decoration: none;
     width: 50px;
     z-index: 4;
     outline: none;
-    background:#5F949C;
-    padding:20px;
+    background: #5F949C;
+    padding: 20px;
     font-size: 1.4rem;
-    color:#E1F8F2;
-   padding-top:40px;
-   padding-left:30px;
-   padding-right: 30px ;
-   
+    color: #E1F8F2;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+
 }
-.home-pg-content{
-    display:grid;
+
+.home-pg-content {
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
     background-color: #e9e8df;
     gap: 3em;
 }
-.company-statement{
-    grid-column: 2/13;
-    grid-row:1;
-    font-size:1.40em;
+
+.company-statement {
+    grid-column: 2/-1;
+    grid-row: 1;
+    font-size: 1em;
 }
-.info-par-1{
+
+.info-par-1 {
     grid-column: 2/7;
-    grid-row:1;
-    padding-top:115px;
-    padding-left:150px;
-     
+    grid-row: 1;
+    padding-top: 115px;
+    padding-left: 150px;
+
 }
+
 .coin {
-  
-    grid-column:1/3;
-    grid-row:1;
+
+    grid-column: 1/3;
+    grid-row: 1;
     padding-top: 100px;
     padding-left: 50px;
-    font-size: 3em; 
+    font-size: 3em;
     font-weight: bold;
     border-radius: 25%;
 }
-.info-par-2{
-    grid-column:8/-1;
-    grid-row:1/7;
+
+.info-par-2 {
+    grid-column: 8/-1;
+    grid-row: 1/7;
     padding-top: 120px;
-    padding-right: 30px; 
-    
-   
+    padding-right: 30px;
+
+
 }
 
-.computer-icon{
+.computer-icon {
     border-radius: 100%;
     grid-column: 7;
-    grid-row:1/3;
-    padding-top: 140px;
-   
+    grid-row: 1/3;
+    padding-top: 7em;
+
 }
 
 
-.recent-header{
-    grid-column:1/7;
-    grid-row:2;
-    margin:0;
+.recent-header {
+    grid-column: 1/7;
+    grid-row: 2;
+    margin: 0;
     justify-self: center;
 }
-.recent-img{
-    grid-column:1/7;
-   
-    width:100%;
+
+.recent-img {
+    grid-column: 1/7;
+
+    width: 100%;
     padding-left: 30px;
 
 }
-.bottom-img-bottom-banner{
+
+.bottom-img-bottom-banner {
     width: 100%;
     grid-column: 1/-1;
-    grid-row:4/7;
-  
+    grid-row: 4/7;
+
 
 
 }
-.info-par-2 p{
-    padding:1em 0;
-} 
-.info-par-2 h4{
+
+.info-par-2 p {
+    padding: 1em 0;
+}
+
+.info-par-2 h4 {
     font-size: 1em;
     font-weight: bold;
+
+}
+.cellphone-icon{
+ grid-column: 7;
+ grid-row: 2;
+ padding-bottom: 1em;
     
 }
 
+/* ************************************************* */
+/* Css specfic to work-together page */
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 13em 13em;
+    gap: 3em 0;
+    background-color: #577a86;
+
+}
+
+.work-together-image {
+    width: 100%;
+    grid-column: 4/10;
+    grid-row: 1;
+
+    padding-top: 50px;
+    /* padding-left: 400px; */
+
+}
+
+.work-together-heading {
+    grid-column: 6/9;
+    grid-row: 1;
+    padding-left: 150px;
+    padding-top: 150px;
+
+
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /*! grid-template-rows: repeat(4, minmax(0, 1fr)); */
+    gap: 3em 0;
+    background-color: #E9E8DF;
+
+    /*! margin: 2em 0; */
+}
+
+.contact {
+    grid-column: 5/9;
+    grid-row: 2;
+}
+
+.side-msg {
+    grid-column: 4/10;
+    grid-row: 3;
+    color: #185f66;
+}
+
+
+/* Form CSS */
+form {
+    /*! max-width: 600px; */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+label {
+    grid-column: 1;
+    justify-self: right;
+    text-align: right;
+}
+
+input {
+    grid-column: 2;
+}
+
+textarea {
+    grid-column: 2;
+}
+
+
+button {
+    width: 205px;
+    background-color:#577a86;
+    color: #ffffff;
+    padding: 1.5em;
+    border-radius: 20px;
+    justify-self: center;
+   
+}
+
+.contact fieldset {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em;
+    border: 3px #0e0404 solid;
+    border-radius: 35px;
+    grid-column: 1/-1;
+    color:#3b4745;
+}
+
+.contact legend {
+    margin: 0 2em;
+}
+
+main {
+    margin: 0 0 2em 0;
+  }
+  nav a {
+    color: var(--accent1-color);
+  }
+  .contact-us-img{
+    grid-column: 2/5;
+    grid-row: 2;
+    padding-left: 1em;
+  }
+  .side-msg{
+   grid-column: 9/-1;
+   grid-row: 2; 
+   padding-left: 1em;
+   padding-top: 2.40em;
+   font-size: 1.25em;
+   color:#577a86;
+
+  }

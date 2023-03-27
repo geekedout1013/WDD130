@@ -8,15 +8,13 @@
     Work Together-Geekedout Design+Tech
   </title>
   <link rel="stylesheet" href="styles/style.css">
-  
-  </style>
+
+
 
 </head>
 
 <body>
-    <header>
-      
-  <div id="content">
+  <div class="content">
     <header>
       <a id="logo_link" href="index.html">
         <img class="logo" src="images/geekedout-logo-1.png" alt="geekedout logo">
@@ -30,43 +28,58 @@
 
     </header>
     <main>
+
+      <div class="container">
+        <img class="work-together-image" src="images/compass.jpg" alt="compass">
+        <h1 class="work-together-heading">Let's Work Together</h1>
+
+      </div>
+
+      <div class="contact-box">
         
-        <div class="container-img">
-            <img class="images" src="images/compass.jpg" alt="compass">
-            <img class="images" src="images/BW computer drive.jpeg" alt="computer drive">
-        </div>
+          <form class="contact" action="#" method="post">
+            <fieldset>
+              <legend>Contact info</legend>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name">
+
+              <label for="mail">E-mail:</label>
+              <input type="email" id="mail" name="user_email">
+
+              <label for="msg">Tell us about your project:</label>
+              <textarea id="msg" name="user_message"></textarea>
+
+            </fieldset>
+            <button type="submit">Send your message</button>
+          </form>
+       
+          
+       
+
+      <p class="side-msg">It's quick, easy, and we only need a few details to get started</p>
+      <img class="contact-us-img" src="images/contact-us.png" alt="contact us">
+    </div>
 
 
-        <form action="/my-handling-form-page" method="post">
-          <fieldset>
-             <legend>Contact info</legend>
-             <label for="name">Name:</label>
-             <input type="text" id="name" name="user_name">
-          
-             <label for="mail">E-mail:</label>
-             <input type="email" id="mail" name="user_email">
-          
-             <label for="msg">Tell us about your project:</label>
-             <textarea id="msg" name="user_message"></textarea>
-          
-          </fieldset>
-          <button type="submit">Send your message</button>
-        </form>
-        <div class="side-msg">It's quick, easy, and we only need a few details to get started</div>
-        
     </main>
     <footer>
-        <p>Geekedout Design + Tech &copy; 2023 - Reese Edwards</p>
-       
-        <div class="social">
-            <a href="https://facebook.com" target="_blank"></a>
-            <a href="https://twitter.com" target="_blank"> </a>
-             <a href="https://instagram.com" target="_blank">
-                <img src="images/social media.PNG" alt="social media">
-            </a>
+      <p class="company-info">Geekedout Design + Tech © 2023 - Reese Edwards</p>
+      
+<a href="site-plan.html" target="_blank" class="site-plan">Site Plan</a>
+
+<div class="social"><a href="site-plan.html" target="_blank">
+          </a><a href="https://facebook.com" target="_blank">
+            <img class="facebook-icon" src="images/facebook.png" alt="facebook icon">
+            </a><a href="https://twitter.com" target="_blank">
+              <img class="twitter-icon" src="images/twitter.png" alt="twitter icon">
+              </a><a href="https://instagram.com" target="_blank">
+                <img class="insta-icon" src="images/instagram.png" alt="instagram icon">
+
+              </a>
         </div>
-            </footer>
+    </footer>
   </div>
+  <div class="contact-box">
   <script>
     // get the feedback div element so we can do something with it.
     const feedbackElement = document.getElementById('feedback');
@@ -84,6 +97,47 @@
       document.body.classList.toggle('moveDown');
     });
   </script>
+  </div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
 
 </body>
 
