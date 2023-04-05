@@ -150,7 +150,7 @@ header {
     grid-template-columns: 250px auto;
     align-items: center;
     background-color: #D8C9AD;
-    /* border-bottom: 5px solid #a9c8cc ; */
+    border-bottom: 5px solid #3e4d4f ;
 }
 
 .logo {
@@ -164,12 +164,12 @@ header {
     margin-top: 5px;
 }
 
-#logo_link_adv {
+/* #logo_link_adv {
     padding-top: 5px;
     justify-self: center;
-    align-self: center;
+    align-self: center; */
 
-}
+/* } */
 
 nav {
     display: grid;
@@ -349,6 +349,7 @@ footer p:hover {
     grid-template-rows: 1fr, 1fr;
     max-width: 500px;
     max-height: 500px;
+    gap: 100px 0;
 
 }
 
@@ -378,4 +379,25 @@ footer p:hover {
     padding-left: 10em; 
     padding-top: 3em;
   
+}
+img{
+    max-width: 100%;
+}
+.container-adv{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:repeat(6,8em );
+    max-width: 100%;
+
+}
+.top-msg{
+    grid-column: 1/2;
+    padding-right: 5em;
+    justify-content: center;
+}
+.card-fg{
+   grid-row:2/5
+}
+.card-fg-4{
+    grid-row: 6;
 }
