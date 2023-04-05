@@ -284,7 +284,132 @@ footer p:hover {
 
 }
 
-@media screen and (max-width: 900px) {
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+    max-width: 500px;
+    max-height: 500px;
+    gap: 100px 0;
+
+}
+
+#header-img {
+    width: 100%
+}
+
+.card-fg {
+    width: 500px;
+    height: 500px;
+    padding: 1em;
+}
+
+/* -------css for adventure page--------------------- */
+
+.logo-adv {
+    width: 150px
+}
+
+.container-adv {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* background-color: #6f7364; */
+
+}
+.top-msg{
+    padding-left: 10em; 
+    padding-top: 3em;
+  
+}
+img{
+    max-width: 100%;
+}
+.container-adv{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows:repeat(6,8em ); */
+    max-width: 100%;
+
+}
+
+
+.bottom-msg{
+    padding-right: 3em;
+}
+
+
+.adv-card:nth-of-type(1){
+    grid-column: 1/6;
+    grid-row: 1;
+}
+.adv-card:nth-of-type(2){
+    grid-column: 7/-1;
+    grid-row: 1;
+}
+.adv-card:nth-of-type(3){
+    grid-column: 1/6;
+    grid-row: 2;
+}
+.adv-card:nth-of-type(4){
+    grid-column: 7/-1;
+    grid-row: 2;
+}
+.top-msg-1{
+    padding-top: 1em;
+    padding-left: 9em;
+    grid-column: 2/5;
+      
+}
+.top-msg-2{
+    padding-top: 1em;
+    padding-left: 8em;
+    grid-column: 7/9;
+      
+}
+.top-msg-3{
+    padding-top: 1em;
+    padding-left: 8em;
+    grid-column: 2/5;
+      
+}
+.top-msg-4{
+    padding-top: 1em;
+    padding-left: 5em;
+    grid-column: 7/9;
+      
+}
+.card-fg-1{
+
+    padding-left: 3em;
+    padding-top: .5em;   
+}
+.card-fg-2{
+    grid-column: 9/-1;
+    padding-top: .5em;
+}
+.card-fg-3{
+    padding-left: 3em;
+    padding-top: .5em;
+
+}
+.card-fg-4{
+    
+    grid-column: 9/-1;
+    padding-left: 3em;
+    padding-top: .5em;
+
+}
+.bottom-msg{
+    padding-left: 8em;
+    font-size: 1.75rem;
+}
+.adv-card-1-mess{
+    padding-left: 3em;
+    font-size: 1.75;
+}
+@media screen and (max-width: 1600px) {
 
     #hero,
     .home-grid {
@@ -341,77 +466,4 @@ footer p:hover {
         margin-top: 25px;
     }
 
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr;
-    max-width: 500px;
-    max-height: 500px;
-    gap: 100px 0;
-
-}
-
-#header-img {
-    width: 100%
-}
-
-.card-fg {
-    width: 500px;
-    height: 500px;
-    padding: 1em;
-}
-
-/* -------css for adventure page--------------------- */
-
-.logo-adv {
-    width: 150px
-}
-
-.container-adv {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* background-color: #6f7364; */
-
-}
-.top-msg{
-    padding-left: 10em; 
-    padding-top: 3em;
-  
-}
-img{
-    max-width: 100%;
-}
-.container-adv{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows:repeat(6,8em );
-    max-width: 100%;
-
-}
-.top-msg{
-    grid-column: 1/2;
-    padding-right: 5em;
-    padding-top: -2em;
-    justify-content: center;
-}
-.bottom-msg{
-    padding-right: 3em;
-}
-
-
-.adv-card:nth-of-type(1){
-    grid-column: 1/6;
-}
-.adv-card:nth-of-type(2){
-    grid-column: 7/-1;
-}
-.adv-card:nth-of-type(3){
-    grid-column: 1/5;
-    grid-row: 6;
-}
-.adv-card:nth-of-type(4){
-    grid-column: 7/-1;
-    grid-row: 6;
 }
