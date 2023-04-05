@@ -148,9 +148,9 @@ header {
     align-self:center;
 }
 nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+    justify-items: center;
 }
 nav a:hover {
     background-color: #5deaa6;
@@ -297,5 +297,9 @@ footer p:hover {
     width:500px;
     height: 500px;
 }
+/* -------css for adventure page--------------------- */
 
+.logo-adv{
+    width:150px;
+}
 
