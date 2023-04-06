@@ -27,7 +27,7 @@ nav a {
 
 #hero {
     display: grid;
-    grid-template-columns: 1 fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     margin-top: -100px;
 }
 
@@ -288,8 +288,8 @@ footer p:hover {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     max-width: 500px;
     max-height: 500px;
     gap: 100px 0;
@@ -407,7 +407,7 @@ img{
 }
 .adv-card-1-mess{
     padding-left: 3em;
-    font-size: 1.75;
+    font-size: 1.50em;
 }
 @media screen and (max-width: 1600px) {
 
